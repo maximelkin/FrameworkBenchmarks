@@ -11,10 +11,13 @@ const Worlds = sequelize.define('world', {
     type: DataTypes.INTEGER,
     primaryKey: true
   },
-  randomNumber: {type: DataTypes.INTEGER}
+  randomNumber: {
+    type: DataTypes.INTEGER,
+    field: 'randomnumber'
+  },
 }, {
   timestamps: false,
-  freezeTableName: true
+  freezeTableName: true,
 });
 
 const Fortunes = sequelize.define('Fortune', {
